@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "linked-picker":"../component/linkedPicker/linkedPicker"
+  }
+}

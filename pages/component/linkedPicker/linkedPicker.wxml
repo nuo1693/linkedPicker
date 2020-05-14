@@ -1,0 +1,20 @@
+<view class="Linked {{flag?'show':''}}" bindtap="clickMask" id="linked_mask">
+    <view class="container">
+        <view class="title">
+            请选择所在地区
+            <icon class="close" type="clear" size="20" bindtap="clickClose" />
+        </view>
+        <view class="head_tab">
+            <block wx:for="{{tabList}}" wx:key="key">
+                <view class="head_tab_item  {{item.name.length > 4?'much':''}}" wx:if="{{item.selectIndex!=-999}}" data-index="{{index}}" bindtap="clickTabItem">
+                    {{item.selectIndex == -1 ? '请选择' :item.name}}
+                </view>
+            </block>
+        </view>
+        <view class="info">
+            <view class="info_item" data-index="{{index}}" bindtap="clickItem" wx:for="{{tabList[tabList.length - 1].list}}" wx:key="key">
+                {{item.name}}
+            </view>
+        </view>
+    </view>
+</view>

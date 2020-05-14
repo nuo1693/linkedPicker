@@ -1,0 +1,5 @@
+<view class="Index">
+  <view bindtap="clickOpenLinked">打开联动</view>
+  <view>{{linkedInfo}}</view>
+</view>
+<linked-picker linked-flag='{{linkedFlag}}' bind:trigger-linked-flag="linkedFlagChange" linked-datas="{{linkeds}}" bind:trigger-linked-confirm="onLinkedConfirm"></linked-picker>
